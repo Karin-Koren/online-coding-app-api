@@ -24,7 +24,7 @@ const io = socketIO(server, {
 });
 
 //const PORT = process.env.PORT || 3000;
-const SOCKET_IO_PORT = process.env.SOCKET_IO_PORT || 3001;
+const SOCKET_IO_PORT = process.env.PORT || 3001;
 
 // Start the server
 server.listen(SOCKET_IO_PORT, () => {
@@ -164,7 +164,7 @@ async function uploadCodeBlocks(codeBlocks) {
 
 uploadCodeBlocks(codeBlocks);
 
-const HTTP_SERVER_PORT = process.env.HTTP_SERVER_PORT || 3002;
+const HTTP_SERVER_PORT = process.env.PORT || 3002;
 // Start the Express server
 app.listen(HTTP_SERVER_PORT, () => {
   console.log(`HTTP server running on port ${HTTP_SERVER_PORT}`);
