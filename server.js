@@ -17,7 +17,7 @@ app.use(express.static("public"));
 const server = http.createServer(app);
 const io = socketIO(server, {
   cors: {
-    origin: "[https://online-coding-app-client.vercel.app]",
+    origin: "[online-coding-app-client-production.up.railway.app]",
     methods: ["GET", "POST"],
     credentials: true,
   },
